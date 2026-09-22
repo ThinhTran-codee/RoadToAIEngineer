@@ -1,4 +1,6 @@
 import numpy as np
+import matplotlib.pyplot as plt
+
 
 def predict(X, w, b):
     return X * w + b
@@ -44,3 +46,14 @@ print("b =", b)
 print("First 5 losses:", loss_history[:5])
 print("Last 5 losses:", loss_history[-5:])
 print("Number of losses:", len(loss_history))
+
+plt.plot(loss_history)
+plt.xlabel("Epoch")
+plt.ylabel("Loss")
+plt.title("Training Loss")
+
+print("Before show")
+
+plt.show()
+
+print("After show")
